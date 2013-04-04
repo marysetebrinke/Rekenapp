@@ -44,16 +44,3 @@ var app = {
 		       );
     }
 };
-$('map area').each(function(){ // Loop through all the image map <area> tags
-    // Set a default transition
-    var DEFAULT_TRANSITION = 'slide';
-    // Hijack image map click events to fix transitions and reverse direction
-    $(this).bind('tap',function(e){
-        // Prevent default action
-        e.preventDefault();
-        // Check for the data-transition attribute on the area tag
-        var transition = ($(this).data().hasOwnProperty('transition')) ? $(this).data().transition : DEFAULT_TRANSITION;
-        // Call the changePage method, including the transition slug
-        $.mobile.changePage($(this).attr('href'),{transition:transition});
-     });
-});
