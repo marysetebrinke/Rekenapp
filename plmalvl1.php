@@ -17,5 +17,9 @@
 		
 	</head>
 <body>	
+	<?php
+	$antwoord = $_POST['antwoord'];
+	 echo "het antwoord is" $antwoord; 
+	?>
 </body>
 </html>

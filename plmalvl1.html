@@ -16,8 +16,23 @@
 		
 	</head>
 	<body>
+<SCRIPT TYPE="text/JavaScript">
+    function validateAnswer(inputField) {
+        var isValid = /^3$/.test(inputField.value);
+
+        if (isValid) {
+		  alert("Goed zo!");
+		  return true
+        } else {
+            alert("Probeer het nog eens...");
+        }
+
+        return false;
+    }
+</SCRIPT>
+	
 	<div style="background-image:url(plmalvl1.png);padding:0px;width:768px;height:1024px;background-repeat:no-repeat;">
-	<form action="plmalvl1.php">
+	<FORM method="POST">
 <table border="0px">
   <tr>
 	<td style="width:25px; height:558px"> </td>
@@ -54,7 +69,8 @@
 	<td style="width:25px; height:79px"> </td>
 	<td style="width:25px; height:79px"> </td>
 	<td style="width:25px; height:79px" colspan="16">
-	 <input type="text" name="Antwoord" value="Typ hier het antwoord..." STYLE="font-size: 25pt;" ></td>
+	 <input type="text" value="Typ hier je antwoord..." onFocus="this.value=''" style="font-size:25pt;text-align:center" onchange="validateAnswer(this);" />
+	 </td> 
 	<td style="width:25px; height:79px"> </td>
 	<td style="width:25px; height:79px"> </td>
 	<td style="width:25px; height:79px"> </td>	
@@ -123,7 +139,7 @@
 	<td style="width:25px; height:110px"> </td>
 </tr>
  </table>
-	
+</form>	
 	</div>
 	</body>
 </html>
