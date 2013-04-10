@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Reken je rot!</title>	
+	</head>
+<body>	
+<SCRIPT TYPE="text/JavaScript">
+    function validateAnswer(inputField) {
+        var isValid = /^3$/.test(inputField.value);
+
+        if (isValid) {
+		  alert("Goed zo!");
+        } else {
+            alert("Probeer het nog eens...");
+        }
+		
+    }
+</SCRIPT>
+<input type="text" value="Typ hier je antwoord..." onFocus="this.value=''" style="font-size:25pt;text-align:center" onblur="validateAnswer(this);" />
+<input type="submit" value="   ">
+
+</body>
+</html>
