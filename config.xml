@@ -19,5 +19,7 @@
     
 	<!-- De app fullscreen maken. -->
     <preference name="fullscreen" value="true" />
+	
+	<icon src="Icon.png" gap:platform="ios" width="72" height="72" />
 
 </widget>
